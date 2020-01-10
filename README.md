@@ -1,2 +1,15 @@
 # Ajax_LoginRegister
-Ajax Signup &amp; Login Form With Real Time Validations &amp; Complete User Profile with Ajax &amp; PHP, Learn Regular Expressions
+
+Project Features:
+
+signup & login system fully jQuery validated 
+
+JavaScript Complex Regular Expressions Validated forms
+
+Complete user profile
+
+Session base flash messages
+
+Fetching address using Google Place API
+
+Submitting forms with bootstrap moda
