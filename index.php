@@ -60,9 +60,11 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" placeholder="Enter Your Name...">
                             </div>
+                            <div class="name-error error"></div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" placeholder="Enter Your Email...">
                             </div>
+                            <div class="email-error error"></div>
                             <div class="form-group">
                                 <input type="password" class="form-control" id="password"
                                        placeholder="Enter Your Password...">
@@ -120,10 +122,13 @@
 </div>
 <!--=== END NAVBAR ===-->
 </body>
+
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/simple.js"></script>
+<script type="text/javascript" src="assets/js/signup.js"></script>
+
 </html>
