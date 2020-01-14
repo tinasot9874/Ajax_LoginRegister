@@ -69,10 +69,11 @@
                                 <input type="password" class="form-control" id="password"
                                        placeholder="Enter Your Password...">
                             </div>
+                            <div class="password-error error"></div>
                             <div class="form-group">
                                 <input type="checkbox" onclick="myFunction()"><span>Show password</span>
                             </div>
-                            <div class="password-error error"></div>
+
                             <div class="form-group">
                                 <input type="password" class="form-control" id="cfm_password"
                                        placeholder="Confirm Password...">

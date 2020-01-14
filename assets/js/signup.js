@@ -111,6 +111,31 @@ $(document).ready(function () {
 			$("#cfm_password").removeClass("border-red");
 			cfm_password = cfm_password_store;
 		}
-
+	})
+	$("#submit").click(function () {
+		if (name.length =="" ){
+			$(".name-error").html("Name is required!");
+			$("#name").addClass("border-red");
+			$("#name").removeClass("border-green");
+			name = "";
+		}
+		else if ( email.length == ""){
+			$(".email-error").html("Email is required!");
+			$("#email").addClass("border-red");
+			$("#email").removeClass("border-green");
+			email = "";
+		}
+		else if ( password.length == ""){
+			$(".password-error").html("Password is required! ");
+			$("#password").addClass("border-red");
+			$("#password").removeClass("border-green");
+			password = "";
+		}
+		else if ( cfm_password.length == ""){
+			$(".cfm_password-error").html("Confirm password is required!");
+			$("#cfm_password").addClass("border-red");
+			$("#cfm_password").removeClass("border-green");
+			cfm_password = "";
+		}
 	})
 })
