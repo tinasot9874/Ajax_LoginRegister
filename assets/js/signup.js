@@ -2,9 +2,10 @@ $(document).ready(function () {
 	var name = "";
 	var email = "";
 	var password = "";
-	var confirm = "";
+	var cfm_password = "";
 	var name_reg = /^[a-z ]+$/i;
-	var email_reg = /^[a-z]+[0-9a-zA-Z_\.]*@[a-z_]+\.[a-z]+$/;
+	var email_reg = /^[a-z]+[0-9a-zA-Z_\.]*@[a-z_]+\.[a-z]+$/;    // Format Email
+	var password_reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/; // (?=.[0-9]) :Check at least one number, (?=.[a-z]) : Check atleast one lowerkey,.
 	// === NAME VALIDATION  === //
 	$("#name").focusout(function () {
 		var name_store = $.trim($("#name").val());
@@ -71,4 +72,45 @@ $(document).ready(function () {
 		}
 	})
 
+	// VALIDATION PASSWORD
+	$("#password").focusout(function () {
+		var password_store = $.trim($("#password").val());
+		if (password_store.length == ""){		// Check password blank
+			$(".password-error").html("Password is required! ");
+			$("#password").addClass("border-red");
+			$("#password").removeClass("border-green");
+			password = "";
+		}else if(password_reg.test(password_store)){
+			$(".password-error").html("");
+			$("#password").addClass("border-green");
+			$("#password").removeClass("border-red");
+			password = password_store;
+		}else{
+			$(".password-error").html("6 characters of longer. Combine upper and lowercase letter and numbers and no blank!");
+			$("#password").addClass("border-red");
+			$("#password").removeClass("border-green");
+			password = "";
+		}
+	})
+	// VALIDATION CFM_PASSWORDD
+	$("#cfm_password").focusout(function () {
+		var cfm_password_store = $.trim($("#cfm_password").val());
+		if (cfm_password_store.length ==""){
+			$(".cfm_password-error").html("Confirm password is required!");
+			$("#cfm_password").addClass("border-red");
+			$("#cfm_password").removeClass("border-green");
+			cfm_password = "";
+		}else if (cfm_password_store !=password){
+			$(".cfm_password-error").html("Password is not match!");
+			$("#cfm_password").addClass("border-red");
+			$("#cfm_password").removeClass("border-green");
+			cfm_password = "";
+		}else{
+			$(".cfm_password-error").html("");
+			$("#cfm_password").addClass("border-green");
+			$("#cfm_password").removeClass("border-red");
+			cfm_password = cfm_password_store;
+		}
+
+	})
 })

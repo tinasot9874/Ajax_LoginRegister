@@ -70,9 +70,14 @@
                                        placeholder="Enter Your Password...">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="confirm"
+                                <input type="checkbox" onclick="myFunction()"><span>Show password</span>
+                            </div>
+                            <div class="password-error error"></div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="cfm_password"
                                        placeholder="Confirm Password...">
                             </div>
+                            <div class="cfm_password-error error"></div>
                         </form>
                         <div class="form-group">
                             <button type="button" id="submit" class="btn btn-success btn-block">Create Account</button>
@@ -131,5 +136,14 @@
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/simple.js"></script>
 <script type="text/javascript" src="assets/js/signup.js"></script>
-
+<script>
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 </html>
