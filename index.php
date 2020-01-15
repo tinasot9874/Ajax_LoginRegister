@@ -56,18 +56,18 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="">
+                        <form action="" method="post" id="signup_formsubmit">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Enter Your Name...">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name...">
                             </div>
                             <div class="name-error error"></div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Enter Your Email...">
+                                <input type="email" class="form-control" name="email_signup" id="email" placeholder="Enter Your Email...">
                             </div>
                             <div class="email-error error"></div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password"
-                                       placeholder="Enter Your Password...">
+                                <input type="password" class="form-control" name="password_signup" id="password"
+                                       placeholder="Enter Your Password..." autocomplete="">
                             </div>
                             <div class="password-error error"></div>
                             <div class="form-group">
@@ -107,11 +107,11 @@
                     <div class="card-body">
                         <form action="">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Enter Your Email...">
+                                <input type="email" class="form-control" id="email_login" placeholder="Enter Your Email...">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password"
-                                       placeholder="Enter Your Password...">
+                                <input type="password" class="form-control" id="password_login"
+                                       placeholder="Enter Your Password..." autocomplete="">
                             </div>
                             <div class="form-group">
                                 <button type="button" id="login" class="btn btn-success btn-block">Login Account</button>

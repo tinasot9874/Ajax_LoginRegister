@@ -112,6 +112,7 @@ $(document).ready(function () {
 			cfm_password = cfm_password_store;
 		}
 	})
+	// VALIDATION BUTTON SUBMIT FORM
 	$("#submit").click(function () {
 		if (name.length =="" ){
 			$(".name-error").html("Name is required!");
@@ -136,6 +137,18 @@ $(document).ready(function () {
 			$("#cfm_password").addClass("border-red");
 			$("#cfm_password").removeClass("border-green");
 			cfm_password = "";
+		}else{
+			$.ajax({
+				type: 'POST',
+				url: 'ajax/signup.php?signup=true',
+				data: $("#signup_formsubmit").serialize(),
+				dataType: 'JSON',
+				success : function (feedback) {
+					if (feedback['error'] == "success"){
+						console.log("Your account is create!");
+					}
+				}
+			})
 		}
 	})
 })

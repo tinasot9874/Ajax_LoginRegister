@@ -14,4 +14,21 @@ function check_email(){
     }
 }
 check_email();
+
+function signup(){
+    GLOBAL $db;
+    if (isset($_GET['signup']) && $_GET['signup'] == true){
+        $name = $_POST['name'];
+        $email = $_POST['email_signup'];
+        $password = password_hash($_POST['password_signup'], PASSWORD_DEFAULT);
+        $query = $db->prepare("INSERT INTO user (name, email, password) VALUES(?,?,?)");
+        $query->execute([$name, $email, $password]);
+        if ($query){
+            $_SESSION['user_name'] = $name;
+            echo json_encode(array('error' => 'success', 'msg'=> 'success.php'));
+        }
+    }
+}
+signup();
+
 ?>
