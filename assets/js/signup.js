@@ -27,7 +27,7 @@ $(document).ready(function () {
 			$("#name").removeClass("border-green");
 			name = "";
 		}
-	})// === CLOSE NAME VALIDATION  === //
+	});// === CLOSE NAME VALIDATION  === //
 	// === EMAIL VALIDATION === //
 	$("#email").focusout(function () {
 		var email_store = $.trim($("#email").val());
@@ -70,7 +70,7 @@ $(document).ready(function () {
 			$("#email").removeClass("border-green");
 			email = "";
 		}
-	})
+	});
 
 	// VALIDATION PASSWORD
 	$("#password").focusout(function () {
@@ -91,7 +91,7 @@ $(document).ready(function () {
 			$("#password").removeClass("border-green");
 			password = "";
 		}
-	})
+	});
 	// VALIDATION CFM_PASSWORDD
 	$("#cfm_password").focusout(function () {
 		var cfm_password_store = $.trim($("#cfm_password").val());
@@ -111,7 +111,7 @@ $(document).ready(function () {
 			$("#cfm_password").removeClass("border-red");
 			cfm_password = cfm_password_store;
 		}
-	})
+	});
 	// VALIDATION BUTTON SUBMIT FORM
 	$("#submit").click(function () {
 		if (name.length =="" ){
@@ -149,11 +149,13 @@ $(document).ready(function () {
 				success : function (feedback) {
 					setTimeout(function () {
 						if (feedback['error'] == "success"){
-							location = feedback.msg;
+								$(".signup-cover").hide();
+								$(".login-cover").show();
+							$(".show-progress").removeClass('progress');
 						}
 					},2000)
 				}
 			})
 		}
-	})
-})
+	});
+});

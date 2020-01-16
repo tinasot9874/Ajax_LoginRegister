@@ -57,7 +57,6 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group show-progress">
-
                         </div>
                         <form action="" method="post" id="signup_formsubmit">
                             <div class="form-group">
@@ -94,7 +93,8 @@
                 </div>
             </div>
             <div class="login-cover">
-
+                <div class="form-group show-progress-login">
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
@@ -108,18 +108,18 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="">
+                        <form action="" id="login-submit-form" method="post">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email_login" placeholder="Enter Your Email...">
+                                <input type="email" name="email_login" class="form-control" id="email_login" placeholder="Enter Your Email...">
                             </div>
                             <div class="login-email-error error"></div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password_login"
+                                <input type="password" name="password_login" class="form-control" id="password_login"
                                        placeholder="Enter Your Password..." autocomplete="">
                             </div>
                             <div class="login-password-error error"></div>
                             <div class="form-group">
-                                <button type="button" id="login" class="btn btn-success btn-block">Login Account</button>
+                                <button type="button" id="login_submit" class="btn btn-success btn-block">Login Account</button>
                             </div>
                             <div class="form-group">
                                 <a href="#" id="signup">Create new account! Click here</a>

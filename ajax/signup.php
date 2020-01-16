@@ -24,8 +24,7 @@ function signup(){
         $query = $db->prepare("INSERT INTO user (name, email, password) VALUES(?,?,?)");
         $query->execute([$name, $email, $password]);
         if ($query){
-            $_SESSION['user_name'] = $name;
-            echo json_encode(array('error' => 'success', 'msg'=> 'success.php'));
+            echo json_encode(array('error' => 'success'));
         }
     }
 }
