@@ -112,10 +112,12 @@
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email_login" placeholder="Enter Your Email...">
                             </div>
+                            <div class="login-email-error error"></div>
                             <div class="form-group">
                                 <input type="password" class="form-control" id="password_login"
                                        placeholder="Enter Your Password..." autocomplete="">
                             </div>
+                            <div class="login-password-error error"></div>
                             <div class="form-group">
                                 <button type="button" id="login" class="btn btn-success btn-block">Login Account</button>
                             </div>
@@ -140,6 +142,7 @@
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/simple.js"></script>
 <script type="text/javascript" src="assets/js/signup.js"></script>
+<script type="text/javascript" src="assets/js/login.js"></script>
 <script>
     function myFunction() {
         var x = document.getElementById("password");
