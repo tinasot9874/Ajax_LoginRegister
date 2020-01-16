@@ -143,10 +143,15 @@ $(document).ready(function () {
 				url: 'ajax/signup.php?signup=true',
 				data: $("#signup_formsubmit").serialize(),
 				dataType: 'JSON',
+				beforeSend: function(){	// Make progress bar sign up
+					$(".show-progress").addClass('progress')
+				},
 				success : function (feedback) {
-					if (feedback['error'] == "success"){
-						console.log("Your account is create!");
-					}
+					setTimeout(function () {
+						if (feedback['error'] == "success"){
+							location = feedback.msg;
+						}
+					},2000)
 				}
 			})
 		}

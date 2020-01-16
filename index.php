@@ -56,6 +56,9 @@
                         </div>
                     </div>
                     <div class="card-body">
+                        <div class="form-group show-progress">
+
+                        </div>
                         <form action="" method="post" id="signup_formsubmit">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name...">
